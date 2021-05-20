@@ -9,7 +9,9 @@
 }
 
 #theme-toggler:before {
-  @include themed(content, "🌙", "🌞");
+  content: "\f186";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }
 
 .navbar-themed {

@@ -9,6 +9,12 @@ $dark-900: #17191a;
     color: $text-white;
   }
 
+  #theme-toggler:before {
+    content: "\f185";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+  }
+
   // Code blocks & Syntax highlighting
 
   @import "native.scss";
@@ -81,4 +87,27 @@ $dark-900: #17191a;
   .timeline-body .timeline-item:after{
     background-color: $dark-900;
   }
+
+  // Backgrounds
+
+  .bg-white {
+    background-color: $dark-900 !important;
+
+    h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-4, .display-5 {
+      color: white !important;
+    }
+  }
+
+  .bg-light {
+    background-color: $dark-600 !important;
+
+    h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-4, .display-5 {
+      color: white !important;
+    }
+  }
+
+  .navbar.border-bottom {
+    border-bottom: 1px solid $dark-600 !important;
+  }
+
 }

@@ -8,6 +8,30 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  #theme-toggler, .nav-link.brand {
+    font-size: 1.3em;
+    line-height: 1.1;
+  }
+
+  .nav-link > small {
+    font-size: .8em;
+  }
+
+  .nav-link > small.text {
+    font-size: .6em;
+  }
+
+  .nav-fill .nav-item, .nav-fill > .nav-link {
+    min-width: 70px !important;
+  }
+
+  footer > div.container {
+    padding-bottom: calc(3rem + 60px) !important;
+  }
+
+}
+
 #theme-toggler:before {
   content: "\f186";
   font-family: "Font Awesome 5 Free";
@@ -33,3 +57,27 @@
   @include themed(background-color, $light, $dark);
 }
 
+ul.nav-fill > li.border-right {
+  border-right: 1px solid #dee2e6 !important;
+}
+
+.bg-gradient {
+  @keyframes fade {
+    to {opacity: 1;}
+  }
+  div {
+    height: 100%;
+    transition: 1s ease-in-out;
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      opacity: 0;
+      animation: fade 3s alternate infinite;
+    }
+  }
+}

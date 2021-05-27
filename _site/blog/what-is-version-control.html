@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 
-<!--
-  portfolYOU Jekyll theme by Youssef Raafat
-  Free for personal and commercial use under the MIT license
-  https://github.com/YoussefRaafatNasry/portfolYOU
--->
-
 <html lang="en" class="h-100">
 
 <head>
@@ -51,53 +45,78 @@
 
   <div class="container">
 
-    <a class="navbar-brand" href="/"><h5><b>Ted Patterson</b></h5></a>
+    <a class="navbar-brand" href="/"><i class="fas fa-grin-stars fa-lg"></i></a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-1x fa-bars text-themed"></i>
-    </button>
+    <ul class="nav"><li class="nav-item">
+          <a class="nav-link " href="/projects/">Work</a>
+        </li>
   
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-      <div class="navbar-nav"><a class="nav-item nav-link hover " href="/projects/">Projects</a>
+      <li class="nav-item">
+          <a class="nav-link active" href="/blog/">Blog</a>
+        </li>
   
-        <a class="nav-item nav-link hover active" href="/blog/">Blog</a>
+      <li class="nav-item">
+          <a class="nav-link " href="/about/">About</a>
+        </li>
   
-        <a class="nav-item nav-link hover " href="/about/">About</a>
-  
+      
         
-  
+      <li class="nav-item">
         <a id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></a>
-      </div>
-    </div>
+      </li>
+  
+    </ul>
 
   </div>
 
 </header>
 
-<header class="navbar navbar-themed bg-white border-top fixed-bottom d-flex justify-content-between d-md-none py-3">
-  <ul class="nav"><li class="nav-item">
-          <a class="nav-link hover " href="/projects/">Projects</a>
-        </li>
+<header class="navbar-themed bg-white border-top fixed-bottom d-md-none">
+  <ul class="nav nav-fill" style="overflow-x: auto !important; flex-wrap: unset;">
 
-      <li class="nav-item">
-          <a class="nav-link hover active" href="/blog/">Blog</a>
-        </li>
-
-      <li class="nav-item">
-          <a class="nav-link hover " href="/about/">About</a>
-        </li>
-
-      
-      
-      <li class="nav-item">
-        <a id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></a>
+    <li class="nav-item border-right">
+      <a class="nav-link pt-2 pb-1 text-center brand" href="/about/">
+        <i class="fas fa-grin-stars"></i>
+        <br>
+        <small class="text">Home</small>
+      </a>
+    </li><li class="nav-item border-right d-flex align-items-center">
+        <a class="nav-link pt-2 pb-1 text-center" href="/projects/">
+          <i class="fas fa-flag fa-lg"></i>
+          <br>
+          <small>Work</small>
+        </a>
       </li>
 
-    </ul>
+    <li class="nav-item border-right d-flex align-items-center">
+        <a class="nav-link pt-2 pb-1 text-center" href="/blog/">
+          <i class="fas fa-comment-alt fa-lg"></i>
+          <br>
+          <small>Blog</small>
+        </a>
+      </li>
 
+    <li class="nav-item border-right d-flex align-items-center">
+        <a class="nav-link pt-2 pb-1 text-center" href="/about/">
+          <i class="fas fa-info-circle fa-lg"></i>
+          <br>
+          <small>About</small>
+        </a>
+      </li>
+
+    
+      
+    <li class="nav-item">
+      <a id="theme-toggler" class="nav-link pt-2 pb-1" role="button" onclick="toggleTheme()">
+        <br>
+        <small class="text">Mode</small>
+      </a>
+    </li>
+
+  </ul>
 </header>
 
-  <div class="mt-5 post">
+  <div class="container mt-5 post">
   <h1><b>What is version control?</b></h1>
 
 <p class="post-metadata text-muted">
@@ -161,53 +180,39 @@
 
 </div>
 
-  <footer class="mt-auto py-3 text-center">
+  <footer class="container-fluid border-top bg-dark">
 
-  <small class="text-muted mb-2">
-    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
-    by <strong>Ted Patterson</strong>
-  </small>
+  <div class="container py-5">
 
-  <div class="container-fluid justify-content-center"><a class="social mx-1"  href="https://www.behance.net/your_username"
-       style="color: #6c757d"
-       onMouseOver="this.style.color='#1769ff'"
-       onMouseOut="this.style.color='#6c757d'">
-      <i class="fab fa-behance fa-1x"></i>
-    </a><a class="social mx-1"  href="mailto:username@domain.com"
-       style="color: #6c757d"
-       onMouseOver="this.style.color='#db4437'"
-       onMouseOut="this.style.color='#6c757d'">
-      <i class="fas fa-envelope fa-1x"></i>
-    </a><a class="social mx-1"  href="https://www.facebook.com/your_username"
-       style="color: #6c757d"
-       onMouseOver="this.style.color='#3b5998'"
-       onMouseOut="this.style.color='#6c757d'">
-      <i class="fab fa-facebook fa-1x"></i>
-    </a><a class="social mx-1"  href="https://www.github.com/your_username"
-       style="color: #6c757d"
-       onMouseOver="this.style.color='#333333'"
-       onMouseOut="this.style.color='#6c757d'">
-      <i class="fab fa-github fa-1x"></i>
-    </a><a class="social mx-1"  href="https://www.linkedin.com/in/your_username"
-       style="color: #6c757d"
-       onMouseOver="this.style.color='#007bb5'"
-       onMouseOut="this.style.color='#6c757d'">
-      <i class="fab fa-linkedin-in fa-1x"></i>
-    </a><a class="social mx-1"  href="https://medium.com/@your_username"
-       style="color: #6c757d"
-       onMouseOver="this.style.color='#00ab6c'"
-       onMouseOut="this.style.color='#6c757d'">
-      <i class="fab fa-medium fa-1x"></i>
-    </a><a class="social mx-1"  href="https://www.twitter.com/your_username"
-       style="color: #6c757d"
-       onMouseOver="this.style.color='#1da1f2'"
-       onMouseOut="this.style.color='#6c757d'">
-      <i class="fab fa-twitter fa-1x"></i>
+    <h4 class="text-muted">
+      Designed and code by myself in 2021
+    </h4>
+
+    <div class="mt-2"><a class="social mr-4"  href="mailto:username@domain.com"
+        style="color: #6c757d"
+        onMouseOver="this.style.color='#db4437'"
+        onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-2x"></i>
+    </a><a class="social mr-4"  href="https://www.github.com/your_username"
+        style="color: #6c757d"
+        onMouseOver="this.style.color='#333333'"
+        onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-2x"></i>
+    </a><a class="social mr-4"  href="https://www.linkedin.com/in/your_username"
+        style="color: #6c757d"
+        onMouseOver="this.style.color='#007bb5'"
+        onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-2x"></i>
+    </a><a class="social mr-4"  href="https://www.twitter.com/your_username"
+        style="color: #6c757d"
+        onMouseOver="this.style.color='#1da1f2'"
+        onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-twitter fa-2x"></i>
     </a>
 
-</div><small id="attribution">
-    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
-  </small>
+</div>
+
+  </div>
   
 </footer>
 
@@ -223,12 +228,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
 <script> new WOW().init(); </script>
 
-<!-- Initialize all tooltips -->
-<script>
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-})
-</script>
+<!-- Theme style -->
+<script src="/assets/js/navbar.js"></script>
 
 
 </body>

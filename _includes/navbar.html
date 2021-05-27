@@ -2,80 +2,19 @@
 
   <div class="container">
 
-    <a class="navbar-brand" href="/"><h5><b>{{ site.title }}</b></h5></a>
+    <a class="navbar-brand" href="/"><i class="fas fa-grin-stars fa-lg"></i></a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-1x fa-bars text-themed"></i>
-    </button>
+    <ul class="nav">
+      {%- assign html_pages = site.html_pages | sort: 'weight' -%}
   
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-  
-        {%- assign html_pages = site.html_pages | sort: 'weight' -%}
-        {%- assign filtered_pages = "" | split: "" -%}
-  
-        {%- for html_page in html_pages -%} 
-  
-          {%- assign exclude = false -%}
-  
-          {%- for exclude_path in site.nav_exclude -%}
-  
-            {%- if exclude_path == html_page.path -%}
-              {%- assign exclude = true -%}
-              {%- break -%}
-            {%- elsif exclude_path contains '**' -%}
-              {%- assign match = exclude_path | remove: '**' -%}
-              {%- if html_page.path contains match -%}
-                {%- assign exclude = true -%}
-                {%- break -%}
-              {%- endif -%}
-            {%- endif -%}
-  
-          {%- endfor -%}
-  
-          {%- unless exclude -%}
-            {%- assign filtered_pages = filtered_pages | push: html_page -%}
-          {%- endunless -%}
-  
-        {%- endfor -%}
-  
-        {% for html_page in filtered_pages %}  
-  
-          {%- if page.url contains html_page.url -%}
-            {%- assign active_status = "active" -%}
-          {%- else -%}
-            {%- assign active_status = "" -%}
-          {%- endif -%}
-  
-          {%- if html_page.external_url -%}
-            {%- assign url = html_page.external_url -%}
-          {%- else -%}
-            {%- assign url = html_page.url | relative_url -%}
-          {%- endif -%}
-  
-          <a class="nav-item nav-link hover {{ active_status }}" href="{{ url }}">{{ html_page.title }}</a>
-  
-        {% endfor %}
-  
-        <a id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></a>
-      </div>
-    </div>
-
-  </div>
-
-</header>
-
-<header class="navbar navbar-themed bg-white border-top fixed-bottom d-flex justify-content-between d-md-none py-3">
-  <ul class="nav">
-    {%- assign html_pages = site.html_pages | sort: 'weight' -%}
       {%- assign filtered_pages = "" | split: "" -%}
-
+  
       {%- for html_page in html_pages -%} 
-
+  
         {%- assign exclude = false -%}
-
+  
         {%- for exclude_path in site.nav_exclude -%}
-
+  
           {%- if exclude_path == html_page.path -%}
             {%- assign exclude = true -%}
             {%- break -%}
@@ -86,38 +25,113 @@
               {%- break -%}
             {%- endif -%}
           {%- endif -%}
-
+  
         {%- endfor -%}
-
+  
         {%- unless exclude -%}
           {%- assign filtered_pages = filtered_pages | push: html_page -%}
         {%- endunless -%}
-
+  
       {%- endfor -%}
-
+  
       {% for html_page in filtered_pages %}  
-
+  
         {%- if page.url contains html_page.url -%}
           {%- assign active_status = "active" -%}
         {%- else -%}
           {%- assign active_status = "" -%}
         {%- endif -%}
-
+  
         {%- if html_page.external_url -%}
           {%- assign url = html_page.external_url -%}
         {%- else -%}
           {%- assign url = html_page.url | relative_url -%}
         {%- endif -%}
         <li class="nav-item">
-          <a class="nav-link hover {{ active_status }}" href="{{ url }}">{{ html_page.title }}</a>
+          <a class="nav-link {{ active_status }}" href="{{ url }}">{{ html_page.title }}</a>
         </li>
-
+  
       {% endfor %}
-      
+        
       <li class="nav-item">
         <a id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></a>
       </li>
-
+  
     </ul>
 
+  </div>
+
+</header>
+
+<header class="navbar-themed bg-white border-top fixed-bottom d-md-none">
+  <ul class="nav nav-fill" style="overflow-x: auto !important; flex-wrap: unset;">
+
+    <li class="nav-item border-right">
+      <a class="nav-link pt-2 pb-1 text-center brand" href="{{ url }}">
+        <i class="fas fa-grin-stars"></i>
+        <br>
+        <small class="text">Home</small>
+      </a>
+    </li>
+
+    {%- assign html_pages = site.html_pages | sort: 'weight' -%}
+
+    {%- assign filtered_pages = "" | split: "" -%}
+
+    {%- for html_page in html_pages -%} 
+
+      {%- assign exclude = false -%}
+
+      {%- for exclude_path in site.nav_exclude -%}
+
+        {%- if exclude_path == html_page.path -%}
+          {%- assign exclude = true -%}
+          {%- break -%}
+        {%- elsif exclude_path contains '**' -%}
+          {%- assign match = exclude_path | remove: '**' -%}
+          {%- if html_page.path contains match -%}
+            {%- assign exclude = true -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endif -%}
+
+      {%- endfor -%}
+
+      {%- unless exclude -%}
+        {%- assign filtered_pages = filtered_pages | push: html_page -%}
+      {%- endunless -%}
+
+    {%- endfor -%}
+
+    {% for html_page in filtered_pages %}  
+
+      {%- if page.url contains html_page.url -%}
+        {%- assign active_status = "active" -%}
+      {%- else -%}
+        {%- assign active_status = "" -%}
+      {%- endif -%}
+
+      {%- if html_page.external_url -%}
+        {%- assign url = html_page.external_url -%}
+      {%- else -%}
+        {%- assign url = html_page.url | relative_url -%}
+      {%- endif -%}
+      <li class="nav-item border-right d-flex align-items-center">
+        <a class="nav-link pt-2 pb-1 text-center" href="{{ url }}">
+          {{ html_page.icon }}
+          <br>
+          <small>{{ html_page.title }}</small>
+        </a>
+      </li>
+
+    {% endfor %}
+      
+    <li class="nav-item">
+      <a id="theme-toggler" class="nav-link pt-2 pb-1" role="button" onclick="toggleTheme()">
+        <br>
+        <small class="text">Mode</small>
+      </a>
+    </li>
+
+  </ul>
 </header>

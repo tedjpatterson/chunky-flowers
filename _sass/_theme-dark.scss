@@ -106,8 +106,26 @@ $dark-900: #17191a;
     }
   }
 
-  .navbar.border-bottom {
-    border-bottom: 1px solid $dark-600 !important;
+  .bg-dark {
+    background-color: white !important;
+
+    h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-4, .display-5, p, i, a, small, strong {
+      color: #343a40 !important;
+    }
+  }
+
+  // Borders
+
+  .border-bottom {
+    border-bottom: 1px solid $dark-300 !important;
+  }
+
+  .border-top {
+    border-top: 1px solid $dark-300 !important;
+  }
+
+  ul.nav-fill > li.border-right {
+    border-right: 1px solid $dark-300 !important;
   }
 
 }

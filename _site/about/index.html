@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 
-<!--
-  portfolYOU Jekyll theme by Youssef Raafat
-  Free for personal and commercial use under the MIT license
-  https://github.com/YoussefRaafatNasry/portfolYOU
--->
-
 <html lang="en" class="h-100">
 
 <head>
@@ -51,62 +45,87 @@
 
   <div class="container">
 
-    <a class="navbar-brand" href="/"><h5><b>Ted Patterson</b></h5></a>
+    <a class="navbar-brand" href="/"><i class="fas fa-grin-stars fa-lg"></i></a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-1x fa-bars text-themed"></i>
-    </button>
+    <ul class="nav"><li class="nav-item">
+          <a class="nav-link " href="/projects/">Work</a>
+        </li>
   
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-<a class="nav-item nav-link hover " href="/projects/">Projects</a>
+      <li class="nav-item">
+          <a class="nav-link " href="/blog/">Blog</a>
+        </li>
   
-        <a class="nav-item nav-link hover " href="/blog/">Blog</a>
+      <li class="nav-item">
+          <a class="nav-link active" href="/about/">About</a>
+        </li>
   
-        <a class="nav-item nav-link hover active" href="/about/">About</a>
-  
+      
         
-  
+      <li class="nav-item">
         <a id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></a>
-      </div>
-    </div>
+      </li>
+  
+    </ul>
 
   </div>
 
 </header>
 
-<header class="navbar navbar-themed bg-white border-top fixed-bottom d-flex justify-content-between d-md-none py-3">
-  <ul class="nav">
-<li class="nav-item">
-          <a class="nav-link hover " href="/projects/">Projects</a>
-        </li>
+<header class="navbar-themed bg-white border-top fixed-bottom d-md-none">
+  <ul class="nav nav-fill" style="overflow-x: auto !important; flex-wrap: unset;">
 
-      <li class="nav-item">
-          <a class="nav-link hover " href="/blog/">Blog</a>
-        </li>
-
-      <li class="nav-item">
-          <a class="nav-link hover active" href="/about/">About</a>
-        </li>
-
-      
-      
-      <li class="nav-item">
-        <a id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></a>
+    <li class="nav-item border-right">
+      <a class="nav-link pt-2 pb-1 text-center brand" href="/about/">
+        <i class="fas fa-grin-stars"></i>
+        <br>
+        <small class="text">Home</small>
+      </a>
+    </li><li class="nav-item border-right d-flex align-items-center">
+        <a class="nav-link pt-2 pb-1 text-center" href="/projects/">
+          <i class="fas fa-flag fa-lg"></i>
+          <br>
+          <small>Work</small>
+        </a>
       </li>
 
-    </ul>
+    <li class="nav-item border-right d-flex align-items-center">
+        <a class="nav-link pt-2 pb-1 text-center" href="/blog/">
+          <i class="fas fa-comment-alt fa-lg"></i>
+          <br>
+          <small>Blog</small>
+        </a>
+      </li>
 
+    <li class="nav-item border-right d-flex align-items-center">
+        <a class="nav-link pt-2 pb-1 text-center" href="/about/">
+          <i class="fas fa-info-circle fa-lg"></i>
+          <br>
+          <small>About</small>
+        </a>
+      </li>
+
+    
+      
+    <li class="nav-item">
+      <a id="theme-toggler" class="nav-link pt-2 pb-1" role="button" onclick="toggleTheme()">
+        <br>
+        <small class="text">Mode</small>
+      </a>
+    </li>
+
+  </ul>
 </header>
 
-  <div class="mt-5 post">
-  <h1 id="about-me"><strong>About Me</strong></h1>
+  <div class="container-fluid d-flex justify-content-center align-items-center mt-md-5 border-bottom animated fadeIn" style="min-height: 35vh;">
+    <h3>This is what I've been working on</h3>
+</div>
 
-<p>Hi I am <strong>Ted Patterson</strong> <img class="emoji" title=":wave:" alt=":wave:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f44b.png" height="20" width="20">,<br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+<div class="container">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
 <div class="row">
-<div class="col-lg">
+    <div class="col-lg mb-5">
 
   <h2 class="mb-3">Programming Skills</h2>
 
@@ -121,7 +140,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     </div>
   </div>
 
-  <div class="progress mb-4 bg-themed" style="height: 8px;">
+  <div class="progress bg-themed" style="height: 8px;">
     <div class="progress-bar bg-danger wow animated slideInLeft" data-wow-delay="0.05" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
@@ -137,7 +156,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     </div>
   </div>
 
-  <div class="progress mb-4 bg-themed" style="height: 8px;">
+  <div class="progress bg-themed" style="height: 8px;">
     <div class="progress-bar bg-primary wow animated slideInLeft" data-wow-delay="0.1" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
@@ -153,7 +172,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     </div>
   </div>
 
-  <div class="progress mb-4 bg-themed" style="height: 8px;">
+  <div class="progress bg-themed" style="height: 8px;">
     <div class="progress-bar bg-secondary wow animated slideInLeft" data-wow-delay="0.15" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
@@ -161,7 +180,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   
 
 </div>
-<div class="col-lg">
+    <div class="col-lg mb-5">
 
   <h2 class="mb-3">Other Skills</h2>
 
@@ -176,7 +195,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     </div>
   </div>
 
-  <div class="progress mb-4 bg-themed" style="height: 8px;">
+  <div class="progress bg-themed" style="height: 8px;">
     <div class="progress-bar bg-info wow animated slideInLeft" data-wow-delay="0.05" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
@@ -192,7 +211,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
     </div>
   </div>
 
-  <div class="progress mb-4 bg-themed" style="height: 8px;">
+  <div class="progress bg-themed" style="height: 8px;">
     <div class="progress-bar bg-success wow animated slideInLeft" data-wow-delay="0.1" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
@@ -202,8 +221,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 </div>
 </div>
 
-<div class="row">
-<div class="col mt-4">
+<div class="col mb-5">
   <div class="timeline-body bg-themed">
     
       <div class="timeline-item">
@@ -217,8 +235,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       <div class="timeline-item">
         <div class="content">
           <h2>Principle UX/UI Designer &amp; Developer, Transnetyx, Memphis, TN/Remote</h2>
-          <h6 class="details">2016 — 2021<a href="" class="px-4" target="_blank"></a>
-</h6>
+          <h6 class="details">2016 — 2021<a href="" class="px-4" target="_blank"></a></h6>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         </div>
       </div>
@@ -226,8 +243,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       <div class="timeline-item">
         <div class="content">
           <h2>Interim UX/UI Lead, ThroughPut Inc. , Remote</h2>
-          <h6 class="details">2020 — 2020<a href="" class="px-4" target="_blank"></a>
-</h6>
+          <h6 class="details">2020 — 2020<a href="" class="px-4" target="_blank"></a></h6>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         </div>
       </div>
@@ -235,8 +251,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       <div class="timeline-item">
         <div class="content">
           <h2>Web Developer, Pro2Serve, Oak Ridge, TN</h2>
-          <h6 class="details">2015 — 2016<a href="" class="px-4" target="_blank"></a>
-</h6>
+          <h6 class="details">2015 — 2016<a href="" class="px-4" target="_blank"></a></h6>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         </div>
       </div>
@@ -244,46 +259,50 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
       <div class="timeline-item">
         <div class="content">
           <h2>Chief Creative Officer, Smart Air, Beijing, China</h2>
-          <h6 class="details">2015 — 2016<a href="" class="px-4" target="_blank"></a>
-</h6>
+          <h6 class="details">2015 — 2016<a href="" class="px-4" target="_blank"></a></h6>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         </div>
       </div>
     
   </div>
 </div>
-</div>
 
 </div>
 
-  <footer class="mt-auto py-3 text-center">
 
-  <small class="text-muted mb-2">
-    <i class="fas fa-code"></i> with <i class="fas fa-heart"></i>
-    by <strong>Ted Patterson</strong>
-  </small>
+  <footer class="container-fluid border-top bg-dark">
 
-  <div class="container-fluid justify-content-center">
-<a class="social mx-1" href="https://www.behance.net/your_username" style="color: #6c757d" onmouseover="this.style.color='#1769ff'" onmouseout="this.style.color='#6c757d'">
-      <i class="fab fa-behance fa-1x"></i>
-    </a><a class="social mx-1" href="mailto:username@domain.com" style="color: #6c757d" onmouseover="this.style.color='#db4437'" onmouseout="this.style.color='#6c757d'">
-      <i class="fas fa-envelope fa-1x"></i>
-    </a><a class="social mx-1" href="https://www.facebook.com/your_username" style="color: #6c757d" onmouseover="this.style.color='#3b5998'" onmouseout="this.style.color='#6c757d'">
-      <i class="fab fa-facebook fa-1x"></i>
-    </a><a class="social mx-1" href="https://www.github.com/your_username" style="color: #6c757d" onmouseover="this.style.color='#333333'" onmouseout="this.style.color='#6c757d'">
-      <i class="fab fa-github fa-1x"></i>
-    </a><a class="social mx-1" href="https://www.linkedin.com/in/your_username" style="color: #6c757d" onmouseover="this.style.color='#007bb5'" onmouseout="this.style.color='#6c757d'">
-      <i class="fab fa-linkedin-in fa-1x"></i>
-    </a><a class="social mx-1" href="https://medium.com/@your_username" style="color: #6c757d" onmouseover="this.style.color='#00ab6c'" onmouseout="this.style.color='#6c757d'">
-      <i class="fab fa-medium fa-1x"></i>
-    </a><a class="social mx-1" href="https://www.twitter.com/your_username" style="color: #6c757d" onmouseover="this.style.color='#1da1f2'" onmouseout="this.style.color='#6c757d'">
-      <i class="fab fa-twitter fa-1x"></i>
+  <div class="container py-5">
+
+    <h4 class="text-muted">
+      Designed and code by myself in 2021
+    </h4>
+
+    <div class="mt-2"><a class="social mr-4"  href="mailto:username@domain.com"
+        style="color: #6c757d"
+        onMouseOver="this.style.color='#db4437'"
+        onMouseOut="this.style.color='#6c757d'">
+      <i class="fas fa-envelope fa-2x"></i>
+    </a><a class="social mr-4"  href="https://www.github.com/your_username"
+        style="color: #6c757d"
+        onMouseOver="this.style.color='#333333'"
+        onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-github fa-2x"></i>
+    </a><a class="social mr-4"  href="https://www.linkedin.com/in/your_username"
+        style="color: #6c757d"
+        onMouseOver="this.style.color='#007bb5'"
+        onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-linkedin-in fa-2x"></i>
+    </a><a class="social mr-4"  href="https://www.twitter.com/your_username"
+        style="color: #6c757d"
+        onMouseOver="this.style.color='#1da1f2'"
+        onMouseOut="this.style.color='#6c757d'">
+      <i class="fab fa-twitter fa-2x"></i>
     </a>
 
 </div>
-<small id="attribution">
-    theme <a href="https://github.com/YoussefRaafatNasry/portfolYOU">portfolYOU</a>
-  </small>
+
+  </div>
   
 </footer>
 
@@ -299,12 +318,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
 <script> new WOW().init(); </script>
 
-<!-- Initialize all tooltips -->
-<script>
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-})
-</script>
+<!-- Theme style -->
+<script src="/assets/js/navbar.js"></script>
 
 
 </body>

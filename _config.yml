@@ -1,7 +1,7 @@
 ### Site Settings ###
 title               : Ted Patterson
 description         : >-
-                      I take complex processes and mold them into intuitive, meaningful experiences.
+                      I craft research & data-driven products that deliver accessible, meaningful experiences
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : tedjpatterson/chunky-flowers     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : tedjpatterson/chunky-flowers
@@ -22,7 +22,7 @@ nav_exclude:                                            # The following paths ar
 ### Author Info ###
 author:
   name              : Ted Patterson
-  image             : https://hddesktopwallpapers.in/wp-content/uploads/2015/09/nice-images.jpg
+  image             : https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F4.bp.blogspot.com%2F-_2qtE-AAL74%2FW23oZOJrsJI%2FAAAAAAAAIYU%2FpKW5wAkhmYAP72L8Sb8QlkM2x0xYZTeEwCLcBGAs%2Fs1600%2Fperson-44.png&f=1&nofb=1
   behance           : your_username
 # dribbble          : your_username
   email             : username@domain.com

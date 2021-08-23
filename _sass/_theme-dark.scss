@@ -93,7 +93,7 @@ $dark-900: #17191a;
   .bg-white {
     background-color: $dark-900 !important;
 
-    h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-4, .display-5 {
+    h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-4, .display-5, p, i, a, small, strong{
       color: white !important;
     }
   }
@@ -101,7 +101,7 @@ $dark-900: #17191a;
   .bg-light {
     background-color: $dark-600 !important;
 
-    h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-4, .display-5 {
+    h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-4, .display-5, p, i, a, small, strong {
       color: white !important;
     }
   }
@@ -114,18 +114,57 @@ $dark-900: #17191a;
     }
   }
 
+  // Button
+
+  [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+  }
+
+  .btn-dark {
+    color: #000;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
+
+    > i {
+      color: #000;
+    }
+  }
+
+  .btn-dark:hover {
+    color: #000;
+    background-color: #f9fafb;
+    border-color: #f9fafb;
+  }
+
   // Borders
 
+  .border {
+    border: 2.5px solid #fff !important;
+  }
+
   .border-bottom {
-    border-bottom: 1px solid $dark-300 !important;
+    border-bottom: 2.5px solid #fff !important;
   }
 
   .border-top {
-    border-top: 1px solid $dark-300 !important;
+    border-top: 2.5px solid #fff !important;
   }
 
   ul.nav-fill > li.border-right {
-    border-right: 1px solid $dark-300 !important;
+    border-right: 2.5px solid $dark-300 !important;
+  }
+
+  // Navbar
+
+  .nav-link {
+    color: #fff !important;
+  }
+
+  // Cards
+
+  .card {
+    border: 2.5px solid #fff !important;
+    background-color: #000;
   }
 
 }

@@ -1,3 +1,8 @@
+$dark-100: $dark;
+$dark-300: #2c3032;
+$dark-600: #242526;
+$dark-900: #17191a;
+
 @mixin themed($property, $light-value, $dark-value) {
   [data-theme="light"] & {
     #{$property}: $light-value;
@@ -80,4 +85,43 @@ ul.nav-fill > li.border-right {
       animation: fade 3s alternate infinite;
     }
   }
+}
+
+// Button
+
+[type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled), button:not(:disabled) {
+  cursor: pointer;
+}
+
+.btn-dark {
+  color: #fff;
+
+  > i {
+    color: #fff;
+  }
+}
+
+// Borders
+
+.border {
+  border: 2.5px solid $dark !important;
+}
+
+.border-bottom {
+  border-bottom: 2.5px solid $dark !important;
+}
+
+.border-top {
+  border-top: 2.5px solid $dark !important;
+}
+
+ul.nav-fill > li.border-right {
+  border-right: 2.5px solid #f8f9fa !important;
+}
+
+// Card
+
+.card {
+  border: 2.5px solid $dark !important;
+  background-color: #fff;
 }

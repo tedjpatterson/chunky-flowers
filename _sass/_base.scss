@@ -1,6 +1,19 @@
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Miriam Libre', sans-serif;
+  font-weight: 400;
+
+  &.font-boldest {
+    font-weight: 700;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #212529;
+  }
+}
+
+.display
 
 .badge {
   font-weight: 500;
@@ -22,6 +35,10 @@ body {
   }
 }
 
-.card {
-  border-radius: 0 !important;
+.hero {
+  min-height: 35vh;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 61.2px !important;
+  }
 }

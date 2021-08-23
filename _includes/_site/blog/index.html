@@ -1,0 +1,9 @@
+<div class="container">
+  <div data-masonry='{"percentPosition": true }' class="row my-5">
+
+    {% for post in site.posts %}
+      {% include blog/post-card.html %}
+    {% endfor %}
+    
+  </div>
+</div>

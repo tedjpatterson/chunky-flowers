@@ -6,14 +6,21 @@
   border-radius: $rounded-borders;
   text-decoration: none !important;
   margin-bottom: 1.5rem;
-
-  transition: transform 600ms;
+  overflow: hidden;
+  transition: ease .25s;
+  box-shadow: 10px 10px 0px 0px $primary;
 
   &:hover {
-    transform: translateY(-8px);
-    box-shadow: -2px 8px 40px -12px rgba(0, 0, 0, 0.24);
+    transform: translateY(-4px);
+    box-shadow: none;
+    transition: ease .25s;
+    border: 2.5px dotted #000 !important;
   }
 
+}
+
+.banner {
+  height: calc(20vh + 65px);
 }
 
 .post {

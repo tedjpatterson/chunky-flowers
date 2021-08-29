@@ -1,6 +1,6 @@
 
 <div class="container">
-  <div data-masonry='{"percentPosition": true }' class="row my-5" style="min-height: 1000px">
+  <div data-masonry='{"percentPosition": true }' class="row mb-5 position-relative" style="min-height: 1000px; top: -50px;">
 
     <!-- Remote Projects -->
     {% for remote_project in page.remote_projects %}
@@ -40,6 +40,8 @@
       {%- assign project_type  = "local" -%}
       {%- assign project_id    = project.name | slugify -%}
       {%- assign project_img   = project.image -%}
+      {%- assign project_bgcolor   = project.background-color -%}
+      {%- assign project_bgimg   = project.background-image -%}
       {%- assign project_name  = project.name -%}
       {%- assign project_desc  = project.description -%}
       {%- assign project_tools = project.tools -%}

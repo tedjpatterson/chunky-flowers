@@ -2,6 +2,65 @@
 layout: default
 ---
 
-<div class="container mt-5 post">
-  {{ content }}
+<div class="container-fluid border-bottom" style="background: no-repeat url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}'); background-size: cover;">
+  <div class="container banner d-flex align-items-center wow animated fadeIn">
+    <h1 class="text-light">{{ page.name }}</h1>
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="container post border position-relative bg-white" style="top: -50px;">
+    {{ content }}
+  </div>
+</div>
+<div class="container-fluid">
+  <div class="container gx-0">
+    <div class="row pb-5">
+      {% if page.previous.url %}
+        <div class="col-lg-6">
+          <div class="wow animated fadeIn" data-wow-delay=".15s">
+            <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" class="project card text-themed">
+              {%- if page.previous.image -%}
+              <img id="{{ page.previous.name }}-img" class="card-img-top" src="{{ page.previous.image }}" alt="{{ page.previous.name }}" />
+              {%- endif -%}
+              <div class="card-body">
+                <h5 id="{{ page.previous.id }}-name" class="card-title">
+                    {%- if page.previous.type == "remote" -%}
+                    <i class="fab fa-github" data-toggle="tooltip" data-placement="bottom" data-delay="250" title="GitHub Repository"></i> |&nbsp;
+                    {%- endif -%}
+                  {{ page.previous.name }}
+                </h5>
+                <p id="{{ page.previous.id }}-desc" class="card-text">{{ page.previous.description }}</p>
+                <div class="d-flex justify-content-start">
+                  <button class="btn btn-lg btn-dark"><i class="fas fa-chevron-left pe-3"></i>View previous post</button>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      {% endif %}
+      {% if page.next.url %}
+        <div class="col-lg-6">
+          <div class="wow animated fadeIn" data-wow-delay=".15s">
+            <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" class="project card text-themed">
+              {%- if page.next.image -%}
+              <img id="{{ page.next.name }}-img" class="card-img-top" src="{{ page.next.image }}" alt="{{ page.next.name }}" />
+              {%- endif -%}
+              <div class="card-body">
+                <h5 id="{{ page.next.id }}-name" class="card-title">
+                    {%- if page.next.type == "remote" -%}
+                    <i class="fab fa-github" data-toggle="tooltip" data-placement="bottom" data-delay="250" title="GitHub Repository"></i> |&nbsp;
+                    {%- endif -%}
+                  {{ page.next.name }}
+                </h5>
+                <p id="{{ page.next.id }}-desc" class="card-text">{{ page.next.description }}</p>
+                <div class="d-flex justify-content-end">
+                  <button class="btn btn-lg btn-dark">View next post<i class="fas fa-chevron-right ps-3"></i></button>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
 </div>

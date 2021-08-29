@@ -2,31 +2,30 @@
 layout: page
 ---
 
-<h1><b>{{ page.title }}</b></h1>
-
-<p class="post-metadata text-muted">
-  {{ page.date | date_to_long_string }} -  
-  <b>
-  {%- assign words = content | number_of_words -%}
-  {%- if words < 360 -%}
-    less than 1 min read time
-  {%- else -%}
-    {{ words | divided_by: 180 }} mins read time
-  {%- endif -%}
-  </b>
-
-  <br>
-
-  {%- if page.tags != empty -%}
-    Tags: 
-    {% for tag in page.tags %}
-    <a class="text-decoration-none no-underline" href="{{ tag | slugify | prepend:'/blog/tags#' | relative_url }}">
-      <span class="tag badge badge-pill text-primary border border-primary">{{ tag }}</span>
-    </a>
-    {% endfor %}
-  {%- endif -%}
-
-</p>
+<div class="row wow animated fadeIn d-flex align-items-center my-2">
+  <div class="col">
+    <p class="mb-0">
+      {{ page.date | date_to_long_string }} -  
+      <b>
+      {%- assign words = content | number_of_words -%}
+      {%- if words < 360 -%}
+        less than 1 min read time
+      {%- else -%}
+        {{ words | divided_by: 180 }} mins read time
+      {%- endif -%}
+      </b>
+    </p>
+  </div>
+  <div class="col text-end">
+    {%- if page.tags != empty -%}
+      {% for tag in page.tags %}
+      <a class="text-decoration-none no-underline" href="{{ tag | slugify | prepend:'/blog/tags#' | relative_url }}">
+        <span class="tag badge badge-pill text-primary border border-primary">{{ tag }}</span>
+      </a>
+      {% endfor %}
+    {%- endif -%}
+  </div>
+</div>
 
 {{ content }}
 

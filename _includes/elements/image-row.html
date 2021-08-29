@@ -1,0 +1,15 @@
+{%- assign images = row_images | strip | newline_to_br | split: '<br />' -%}
+
+<div class="row wow animated fadeIn">
+  {% for image in images %}
+    {%- if forloop.first -%}
+      <div class="col-lg">
+        <img src="{{ image }}" class="img-fluid w-100">
+      </div>
+    {%- else -%}
+      <div class="col-lg">
+        <img src="{{ image }}" class="img-fluid w-100">
+      </div>
+    {%- endif -%}
+  {% endfor %}
+</div>

@@ -1,12 +1,16 @@
 .project.card {
-  
+  border-radius: $rounded-borders;
   text-decoration: none !important;
-  margin: 10px auto;
-  transition: transform 600ms;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: ease .25s;
+  box-shadow: 10px 10px 0px 0px $primary;
 
-  &:hover:not(.post) {
+  &:hover {
     transform: translateY(-4px);
-    box-shadow: -2px 8px 40px -12px rgba(0, 0, 0, 0.24);
+    box-shadow: none;
+    transition: ease .25s;
+    border: 2.5px dotted #000 !important;
   }
 
   .badge {

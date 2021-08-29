@@ -1,8 +1,8 @@
 <div class="col-lg-6 col-xxl-4">
   <div class="wow animated fadeIn" data-wow-delay=".15s">
-    <a href="{{ project_url }}" class="project card text-themed shadow">
+    <a href="{{ project_url }}" class="project card text-themed">
       {%- if project_img -%}
-      <img id="{{ project_id }}-img" class="card-img-top" src="{{ project_img }}" alt="{{ project_name }}" />
+      <img id="{{ project_id }}-img" class="card-img-top bg-white" src="{{ project_img }}" alt="{{ project_name }}" />
       {%- endif -%}
       <div class="card-body">
         <h5 id="{{ project_id }}-name" class="card-title">
@@ -18,7 +18,7 @@
           {%- endfor -%}
         </p>
         <div class="d-grid">
-          <button class="btn btn-lg btn-dark btn-block d-flex justify-content-between">View<i class="fas fa-chevron-right"></i></button>
+          <button class="btn btn-lg btn-dark btn-block d-flex justify-content-between align-items-center">View<i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
     </a>

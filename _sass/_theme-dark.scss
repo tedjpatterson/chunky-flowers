@@ -93,7 +93,7 @@ $dark-900: #17191a;
   .bg-white {
     background-color: $dark-900 !important;
 
-    h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-4, .display-5, p, i, a, small, strong{
+    h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-4, .display-5, p, a, small, strong{
       color: white !important;
     }
   }
@@ -101,7 +101,7 @@ $dark-900: #17191a;
   .bg-light {
     background-color: $dark-600 !important;
 
-    h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-4, .display-5, p, i, a, small, strong {
+    h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-4, .display-5, p, a, small, strong {
       color: white !important;
     }
   }
@@ -109,7 +109,7 @@ $dark-900: #17191a;
   .bg-dark {
     background-color: white !important;
 
-    h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-4, .display-5, p, i, a, small, strong {
+    h1, h2, h3, h4, h5, h6, .display-1, .display-2, .display-4, .display-5, p, a, small, strong {
       color: #343a40 !important;
     }
   }
@@ -121,12 +121,12 @@ $dark-900: #17191a;
   }
 
   .btn-dark {
-    color: #000;
+    color: #000 !important;
     background-color: #f8f9fa;
     border-color: #f8f9fa;
 
     > i {
-      color: #000;
+      color: #000 !important;
     }
   }
 

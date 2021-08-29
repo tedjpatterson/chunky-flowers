@@ -75,7 +75,7 @@ defaults:
       path: ""
       type: "projects"
     values:
-      layout: "page"
+      layout: "project"
   - scope:                                              # For Documentation Only
       path: ""                                          # For Documentation Only
       type: "elements"                                  # For Documentation Only
@@ -86,6 +86,7 @@ defaults:
       type: "posts"
     values:
       comments: false                                   # Set to true to enable disqus comments
+      layout: "post"
 
 ### Exclude from processing ###
 exclude:

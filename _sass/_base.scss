@@ -1,5 +1,9 @@
 body {
   font-family: 'Roboto', sans-serif;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 59px;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -41,4 +45,10 @@ h1, h2, h3, h4, h5, h6 {
   @media screen and (min-width: 768px) {
     margin-top: 61.2px !important;
   }
+}
+
+// Card
+
+.card-img, .card-img-top {
+  border-radius: 0px;
 }
